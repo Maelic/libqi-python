@@ -69,10 +69,8 @@ overridable_variable(GOOGLETEST_GIT_REPOSITORY https://github.com/google/googlet
 # `ExternalProject` module documentation of the `GIT_TAG` argument.
 overridable_variable(GOOGLETEST_GIT_TAG release-${GOOGLETEST_VERSION})
 
-set(PYTHON_VERSION_STRING "" CACHE STRING "Version of Python to look for. This \
-variable can be specified by tools run directly from Python to enforce the \
-use of the same version.")
-mark_as_advanced(PYTHON_VERSION_STRING)
+
+overridable_variable(PYTHON_VERSION_STRING 3.8)
 
 if(NOT COMMAND FetchContent_Declare)
   include(FetchContent)

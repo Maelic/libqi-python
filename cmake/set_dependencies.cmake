@@ -70,7 +70,7 @@ overridable_variable(GOOGLETEST_GIT_REPOSITORY https://github.com/google/googlet
 overridable_variable(GOOGLETEST_GIT_TAG release-${GOOGLETEST_VERSION})
 
 
-overridable_variable(PYTHON_VERSION_STRING 3.8)
+overridable_variable(PYTHON_VERSION 3.8)
 
 if(NOT COMMAND FetchContent_Declare)
   include(FetchContent)

@@ -35,7 +35,7 @@ target_link_libraries(qi.interface INTERFACE ${QI_LIBRARIES})
 
 foreach(_dep IN LISTS QI_DEPENDS)
   if(NOT ${_dep}_PACKAGE_FOUND)
-    find_package(${_dep} EXACT REQUIRED CONFIG)
+    find_package(${_dep} REQUIRED CONFIG)
   endif()
   target_include_directories(qi.interface SYSTEM INTERFACE ${${_dep}_INCLUDE_DIRS})
   target_link_libraries(qi.interface INTERFACE ${${_dep}_LIBRARIES})

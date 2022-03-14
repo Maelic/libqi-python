@@ -192,10 +192,8 @@ endif()
 # only, but this time force the module to find it or fail (REQUIRED).
 # Some of our toolchains (when crosscompiling for instance) have the Python
 # library but not an interpreter that can run on the host.
-find_package(Python ${_python_version} COMPONENTS Development Interpreter)
-if(NOT Python_FOUND)
-  find_package(Python ${_python_version} REQUIRED COMPONENTS Development)
-endif()
+find_package(Python ${_python_version} EXACT COMPONENTS Development Interpreter)
+
 
 list(GET Python_LIBRARIES 0 _py_lib)
 add_library(python_headers INTERFACE)

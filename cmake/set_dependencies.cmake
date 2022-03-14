@@ -174,11 +174,8 @@ find_package(OpenSSL REQUIRED)
 
 # Python
 parse_python_version(_python_version "${PYTHON_VERSION_STRING}")
-if(_python_version_VERSION_STRING)
-  set(_python_version ${_python_version_VERSION_RELEASE_MAJOR_MINOR})
-else()
-  set(_python_version 3.5) # default to Python 3.5+.
-endif()
+set(_python_version 3.8)
+
 
 # Set variables that the CMake module recognizes from variables that the
 # scikit-build build system module may pass to us.

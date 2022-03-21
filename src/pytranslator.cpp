@@ -32,8 +32,8 @@ void exportTranslator(::py::module& m)
          doc("Translate a message with a context."))
     .def("setCurrentLocale", &Translator::setCurrentLocale,
          call_guard<gil_scoped_release>(), "locale"_a, doc("Set the locale."))
-    .def("setDefaultDomain", &Translator::setDefaultDomain, "domain"_a,
-         call_guard<gil_scoped_release>(), doc("Set the domain."))
+    .def("setDefaultDomain", &Translator::setDefaultDomain, 
+         call_guard<gil_scoped_release>(), "domain"_a, doc("Set the domain."))
     .def("addDomain", &Translator::addDomain, "domain"_a,
          doc("Add a new domain."));
 }

@@ -45,7 +45,7 @@
 include_guard(GLOBAL)
 
 # Version of Boost to use. It will be used as the argument to the `find_package(Boost)` call.
-overridable_variable(BOOST_VERSION 1.77)
+overridable_variable(BOOST_VERSION 1.78)
 
 # Version of pybind11 to use.
 overridable_variable(PYBIND11_VERSION 2.9.0)
@@ -67,7 +67,7 @@ overridable_variable(GOOGLETEST_GIT_REPOSITORY https://github.com/google/googlet
 overridable_variable(GOOGLETEST_GIT_TAG main)
 
 
-overridable_variable(PYTHON_VERSION 3.8)
+overridable_variable(PYTHON_VERSION 3.10)
 
 if(NOT COMMAND FetchContent_Declare)
   include(FetchContent)
@@ -171,7 +171,7 @@ find_package(OpenSSL REQUIRED)
 
 # Python
 parse_python_version(_python_version "${PYTHON_VERSION_STRING}")
-set(_python_version 3.8)
+set(_python_version 3.10)
 
 
 # Set variables that the CMake module recognizes from variables that the

@@ -1,4 +1,5 @@
 [project]
+name = "qi"
 dependencies = [
   "packaging"
 ]
